@@ -1919,3 +1919,368 @@ events:
       variable: "run_result"
       cached: true
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_620a7
+        [1/2] /usr/bin/c++    -o CMakeFiles/cmTC_620a7.dir/detect_cuda_version.cc.o -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_version.cc
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_620a7.dir/detect_cuda_version.cc.o -o cmTC_620a7  /usr/lib/x86_64-linux-gnu/libcudart.so && :
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.0
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "libtorch/share/cmake/Caffe2/public/utils.cmake:331 (cuda_select_nvcc_arch_flags)"
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:320 (torch_cuda_get_nvcc_gencode_flag)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_6a432
+        [1/2] /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_6a432.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_6a432.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_6a432.dir/detect_cuda_compute_capabilities.cu.o
+        FAILED: CMakeFiles/cmTC_6a432.dir/detect_cuda_compute_capabilities.cu.o 
+        /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_6a432.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_6a432.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_6a432.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc fatal   : Unsupported gpu architecture 'compute_120'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_ad1b2
+        [1/2] /usr/bin/c++    -o CMakeFiles/cmTC_ad1b2.dir/detect_cuda_version.cc.o -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_version.cc
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_ad1b2.dir/detect_cuda_version.cc.o -o cmTC_ad1b2  /usr/lib/x86_64-linux-gnu/libcudart.so && :
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.0
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "libtorch/share/cmake/Caffe2/public/utils.cmake:331 (cuda_select_nvcc_arch_flags)"
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:320 (torch_cuda_get_nvcc_gencode_flag)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_201f5
+        [1/2] /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_201f5.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_201f5.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_201f5.dir/detect_cuda_compute_capabilities.cu.o
+        FAILED: CMakeFiles/cmTC_201f5.dir/detect_cuda_compute_capabilities.cu.o 
+        /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_201f5.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_201f5.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_201f5.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc fatal   : Unsupported gpu architecture 'compute_120'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_a6915
+        [1/2] /usr/bin/c++    -o CMakeFiles/cmTC_a6915.dir/detect_cuda_version.cc.o -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_version.cc
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_a6915.dir/detect_cuda_version.cc.o -o cmTC_a6915  /usr/lib/x86_64-linux-gnu/libcudart.so && :
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.0
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "libtorch/share/cmake/Caffe2/public/utils.cmake:331 (cuda_select_nvcc_arch_flags)"
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:320 (torch_cuda_get_nvcc_gencode_flag)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_f2746
+        [1/2] /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_f2746.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_f2746.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_f2746.dir/detect_cuda_compute_capabilities.cu.o
+        FAILED: CMakeFiles/cmTC_f2746.dir/detect_cuda_compute_capabilities.cu.o 
+        /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_f2746.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_f2746.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_f2746.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc fatal   : Unsupported gpu architecture 'compute_120'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_e6b94
+        [1/2] /usr/bin/c++    -o CMakeFiles/cmTC_e6b94.dir/detect_cuda_version.cc.o -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_version.cc
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_e6b94.dir/detect_cuda_version.cc.o -o cmTC_e6b94  /usr/lib/x86_64-linux-gnu/libcudart.so && :
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.0
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "libtorch/share/cmake/Caffe2/public/utils.cmake:331 (cuda_select_nvcc_arch_flags)"
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:320 (torch_cuda_get_nvcc_gencode_flag)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c167c
+        [1/2] /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_c167c.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_c167c.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_c167c.dir/detect_cuda_compute_capabilities.cu.o
+        FAILED: CMakeFiles/cmTC_c167c.dir/detect_cuda_compute_capabilities.cu.o 
+        /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_c167c.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_c167c.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_c167c.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc fatal   : Unsupported gpu architecture 'compute_120'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_84a9d
+        [1/2] /usr/bin/c++    -o CMakeFiles/cmTC_84a9d.dir/detect_cuda_version.cc.o -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_version.cc
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_84a9d.dir/detect_cuda_version.cc.o -o cmTC_84a9d  /usr/lib/x86_64-linux-gnu/libcudart.so && :
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.0
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "libtorch/share/cmake/Caffe2/public/utils.cmake:331 (cuda_select_nvcc_arch_flags)"
+      - "libtorch/share/cmake/Caffe2/public/cuda.cmake:320 (torch_cuda_get_nvcc_gencode_flag)"
+      - "libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:6 (find_package)"
+    directories:
+      source: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+      binary: "/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "native"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2;/home/sameta/my-flash-attention-minimal/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/sameta/my-flash-attention-minimal/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_9653d
+        [1/2] /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_9653d.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_9653d.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_9653d.dir/detect_cuda_compute_capabilities.cu.o
+        FAILED: CMakeFiles/cmTC_9653d.dir/detect_cuda_compute_capabilities.cu.o 
+        /usr/bin/nvcc -forward-unknown-to-host-compiler   -arch=native -MD -MT CMakeFiles/cmTC_9653d.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_9653d.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/sameta/my-flash-attention-minimal/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_9653d.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc fatal   : Unsupported gpu architecture 'compute_120'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result"
+      cached: true
+...

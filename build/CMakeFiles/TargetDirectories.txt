@@ -1,3 +1,4 @@
 /home/sameta/my-flash-attention-minimal/build/CMakeFiles/example-app.dir
+/home/sameta/my-flash-attention-minimal/build/CMakeFiles/flash-attn.dir
 /home/sameta/my-flash-attention-minimal/build/CMakeFiles/edit_cache.dir
 /home/sameta/my-flash-attention-minimal/build/CMakeFiles/rebuild_cache.dir
