@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/sameta/my-flash-attention-minimal/build",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_C10D_NCCL -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/sameta/my-flash-attention-minimal/libtorch/include -isystem /home/sameta/my-flash-attention-minimal/libtorch/include/torch/csrc/api/include -g -std=gnu++17 -o CMakeFiles/example-app.dir/example-app.cpp.o -c /home/sameta/my-flash-attention-minimal/example-app.cpp",
+  "file": "/home/sameta/my-flash-attention-minimal/example-app.cpp",
+  "output": "CMakeFiles/example-app.dir/example-app.cpp.o"
+}
+]
