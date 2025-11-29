@@ -92,6 +92,14 @@ build CMakeFiles/flash-attn.dir/flash-attn.cpp.o: CXX_COMPILER__flash-attn_unsca
   OBJECT_DIR = CMakeFiles/flash-attn.dir
   OBJECT_FILE_DIR = CMakeFiles/flash-attn.dir
 
+build CMakeFiles/flash-attn.dir/flash.cu.o: CUDA_COMPILER__flash-attn_unscanned_Debug /home/sameta/my-flash-attention-minimal/flash.cu || cmake_object_order_depends_target_flash-attn
+  DEFINES = -DUSE_C10D_GLOO -DUSE_C10D_NCCL -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE
+  DEP_FILE = CMakeFiles/flash-attn.dir/flash.cu.o.d
+  FLAGS = -DONNX_NAMESPACE=onnx_c2 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_89,code=sm_89 -gencode arch=compute_90,code=sm_90 -gencode arch=compute_90a,code=sm_90a -Xcudafe --diag_suppress=cc_clobber_ignored,--diag_suppress=field_without_dll_interface,--diag_suppress=base_class_has_different_dll_interface,--diag_suppress=dll_interface_conflict_none_assumed,--diag_suppress=dll_interface_conflict_dllexport_assumed,--diag_suppress=bad_friend_decl --expt-relaxed-constexpr --expt-extended-lambda -g -std=c++17
+  INCLUDES = -isystem /home/sameta/my-flash-attention-minimal/libtorch/include -isystem /home/sameta/my-flash-attention-minimal/libtorch/include/torch/csrc/api/include
+  OBJECT_DIR = CMakeFiles/flash-attn.dir
+  OBJECT_FILE_DIR = CMakeFiles/flash-attn.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target flash-attn
@@ -100,10 +108,10 @@ build CMakeFiles/flash-attn.dir/flash-attn.cpp.o: CXX_COMPILER__flash-attn_unsca
 #############################################
 # Link the executable flash-attn
 
-build flash-attn: CXX_EXECUTABLE_LINKER__flash-attn_Debug CMakeFiles/flash-attn.dir/flash-attn.cpp.o | /home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libkineto.a /usr/lib/x86_64-linux-gnu/libnvrtc.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so /usr/lib/x86_64-linux-gnu/libcudart.so
+build flash-attn: CXX_EXECUTABLE_LINKER__flash-attn_Debug CMakeFiles/flash-attn.dir/flash-attn.cpp.o CMakeFiles/flash-attn.dir/flash.cu.o | /home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libkineto.a /usr/lib/x86_64-linux-gnu/libnvrtc.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so /usr/lib/x86_64-linux-gnu/libcudart.so
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/lib/intel64:/lib/intel64_win:/lib/win-x64:/home/sameta/my-flash-attention-minimal/libtorch/lib  /home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libkineto.a  /usr/lib/x86_64-linux-gnu/libnvrtc.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so  -Wl,--no-as-needed,"/home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch_cpu.so" -Wl,--as-needed  -Wl,--no-as-needed,"/home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch_cuda.so" -Wl,--as-needed  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so  /usr/lib/x86_64-linux-gnu/libcudart.so  -Wl,--no-as-needed,"/home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch.so" -Wl,--as-needed
-  LINK_PATH = -L/lib/intel64   -L/lib/intel64_win   -L/lib/win-x64
+  LINK_LIBRARIES = -Wl,-rpath,/lib/intel64:/lib/intel64_win:/lib/win-x64:/home/sameta/my-flash-attention-minimal/libtorch/lib  /home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libkineto.a  /usr/lib/x86_64-linux-gnu/libnvrtc.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so  -Wl,--no-as-needed,"/home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch_cpu.so" -Wl,--as-needed  -Wl,--no-as-needed,"/home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch_cuda.so" -Wl,--as-needed  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10_cuda.so  /home/sameta/my-flash-attention-minimal/libtorch/lib/libc10.so  /usr/lib/x86_64-linux-gnu/libcudart.so  -Wl,--no-as-needed,"/home/sameta/my-flash-attention-minimal/libtorch/lib/libtorch.so" -Wl,--as-needed  -lcudadevrt  -lcudart_static  -lrt  -lpthread  -ldl
+  LINK_PATH = -L/lib/intel64   -L/lib/intel64_win   -L/lib/win-x64   -L/usr/lib/x86_64-linux-gnu/stubs   -L/usr/lib/gcc/x86_64-linux-gnu/12
   OBJECT_DIR = CMakeFiles/flash-attn.dir
   POST_BUILD = :
   PRE_LINK = :

@@ -31,6 +31,16 @@ rule CXX_EXECUTABLE_LINKER__example-app_Debug
 
 
 #############################################
+# Rule for compiling CUDA files.
+
+rule CUDA_COMPILER__flash-attn_unscanned_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}/usr/bin/nvcc -forward-unknown-to-host-compiler $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -x cu -c $in -o $out
+  description = Building CUDA object $out
+
+
+#############################################
 # Rule for compiling CXX files.
 
 rule CXX_COMPILER__flash-attn_unscanned_Debug

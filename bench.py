@@ -5,7 +5,17 @@ from torch.nn import functional as F
 from torch.utils.cpp_extension import load
 
 # Load the CUDA kernel as a python module
-minimal_attn = load(name='minimal_attn', sources=['main.cpp', 'flash.cu'], extra_cuda_cflags=['-O2'])
+minimal_attn = load(
+    name='minimal_attn',
+    sources=['main.cpp', 'flash.cu'],
+    extra_cuda_cflags=[
+        '-O2',
+        '-gencode=arch=compute_120,code=sm_120',
+        '-gencode=arch=compute_120,code=compute_120'   # 生成 PTX
+    ],
+    verbose=True,
+)
+
 
 # Use small model params, otherwise slower than manual attention. See caveats in README.
 batch_size = 16
@@ -26,13 +36,13 @@ def manual_attn(q, k, v):
     y = att @ v
     return y
 
-with torch.autograd.profiler.profile(use_cuda=True) as prof:
+with torch.autograd.profiler.profile(use_device = 'cuda') as prof:
     manual_result = manual_attn(q, k, v)
 print(prof.key_averages().table(sort_by='cuda_time_total', row_limit=10))
 
 print('=== profiling minimal flash attention === ')
 
-with torch.autograd.profiler.profile(use_cuda=True) as prof:
+with torch.autograd.profiler.profile(use_device = 'cuda') as prof:
     minimal_result = minimal_attn.forward(q, k, v)
 print(prof.key_averages().table(sort_by='cuda_time_total', row_limit=10))
 
