@@ -14,10 +14,7 @@ add_executable(flash-attn flash-attn.cpp flash.cu)
 target_link_libraries(flash-attn "${TORCH_LIBRARIES}")
 set_property(TARGET flash-attn PROPERTY CXX_STANDARD 17)
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_options(flash-attn PRIVATE
-        $<$<COMPILE_LANGUAGE:CUDA>:-G>
-        $<$<COMPILE_LANGUAGE:CUDA>:-g>
-    )
+    target_compile_options(flash-attn PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-G>)
 endif()
 
 
