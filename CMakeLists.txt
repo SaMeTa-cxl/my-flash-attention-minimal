@@ -13,6 +13,13 @@ set_property(TARGET example-app PROPERTY CXX_STANDARD 17)
 add_executable(flash-attn flash-attn.cpp flash.cu)
 target_link_libraries(flash-attn "${TORCH_LIBRARIES}")
 set_property(TARGET flash-attn PROPERTY CXX_STANDARD 17)
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    target_compile_options(flash-attn PRIVATE
+        $<$<COMPILE_LANGUAGE:CUDA>:-G>
+        $<$<COMPILE_LANGUAGE:CUDA>:-g>
+    )
+endif()
+
 
 # The following code block is suggested to be used on Windows.
 # According to https://github.com/pytorch/pytorch/issues/25457,

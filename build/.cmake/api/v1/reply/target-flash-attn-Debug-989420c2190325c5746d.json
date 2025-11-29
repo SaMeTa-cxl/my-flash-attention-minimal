@@ -15,7 +15,8 @@
 			"set_target_properties",
 			"include",
 			"find_package",
-			"set_property"
+			"set_property",
+			"target_compile_options"
 		],
 		"files" : 
 		[
@@ -107,6 +108,12 @@
 				"parent" : 8
 			},
 			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
 				"command" : 5,
 				"file" : 0,
 				"line" : 15,
@@ -164,7 +171,7 @@
 			{
 				"backtraces" : 
 				[
-					15
+					16
 				],
 				"standard" : "17"
 			},
@@ -178,6 +185,14 @@
 			[
 				{
 					"fragment" : " -DONNX_NAMESPACE=onnx_c2 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_89,code=sm_89 -gencode arch=compute_90,code=sm_90 -gencode arch=compute_90a,code=sm_90a -Xcudafe --diag_suppress=cc_clobber_ignored,--diag_suppress=field_without_dll_interface,--diag_suppress=base_class_has_different_dll_interface,--diag_suppress=dll_interface_conflict_none_assumed,--diag_suppress=dll_interface_conflict_dllexport_assumed,--diag_suppress=bad_friend_decl --expt-relaxed-constexpr --expt-extended-lambda -g -std=c++17"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-G"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-g"
 				}
 			],
 			"defines" : 
@@ -221,7 +236,7 @@
 			{
 				"backtraces" : 
 				[
-					15
+					16
 				],
 				"standard" : "17"
 			},
